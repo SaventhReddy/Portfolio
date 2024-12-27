@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Chronicles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+        }
+
+        .header {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff3e3e, #ff8f8f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .location-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .location-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            margin-bottom: 3rem;
+            overflow: hidden;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: fadeUp 0.5s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .location-header {
+            position: relative;
+            height: 400px;
+        }
+
+        .location-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .location-info {
+            padding: 2rem;
+        }
+
+        .location-title {
+            font-size: 2.5rem;
+            color: #ff3e3e;
+            margin-bottom: 1rem;
+        }
+
+        .location-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            color: #888;
+        }
+
+        .poem {
+            font-style: italic;
+            color: #ccc;
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            border-left: 3px solid #ff3e3e;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .description {
+            margin: 2rem 0;
+            line-height: 1.8;
+        }
+
+        .highlights {
+            background: rgba(255,62,62,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .highlights h3 {
+            color: #ff3e3e;
+            margin-bottom: 1rem;
+        }
+
+        .highlights ul {
+            list-style: none;
+        }
+
+        .highlights li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .highlights li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ff3e3e;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>Travel Chronicles</h1>
+            <p>Journey through time and space</p>
+        </div>
+    </div>
+
+    <div class="location-grid">
+        <article class="location-card">
+            <div class="location-header">
+                <img src="/api/placeholder/1200/800" alt="Santorini">
+            </div>
+            <div class="location-info">
+                <h2 class="location-title">Santorini, Greece</h2>
+                <div class="location-meta">
+                    <span>Duration: 7 Days</span>
+                    <span>Season: Summer 2023</span>
+                </div>
+                <div class="poem">
+                    White-washed walls against azure skies,<br>
+                    Where ancient tales and beauty lies.<br>
+                    Sunset paints the caldera's rim,<br>
+                    As day fades, growing soft and dim.
+                </div>
+                <div class="description">
+                    Perched on the edge of a volcanic caldera, Santorini is a crescent-shaped wonder where traditional Cycladic architecture meets dramatic cliff-side views. Every corner tells a story of ancient civilization, while every sunset paints a new masterpiece across the Aegean Sea.
+                </div>
+                <div class="highlights">
+                    <h3>Highlights</h3>
+                    <ul>
+                        <li>Sunset watching in Oia</li>
+                        <li>Wine tasting in traditional vineyards</li>
+                        <li>Exploring ancient Akrotiri</li>
+                        <li>Swimming in volcanic hot springs</li>
+                    </ul>
+                </div>
+                <div class="gallery">
+                    <img src="/api/placeholder/400/300" alt="Oia sunset">
+                    <img src="/api/placeholder/400/300" alt="Blue domes">
+                    <img src="/api/placeholder/400/300" alt="Caldera view">
+                </div>
+            </div>
+        </article>
+
+        <!-- Similar structure repeated for other locations -->
+        
+    </div>
+</body>
+</html>

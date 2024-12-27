@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Indian Culinary Journey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .header {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff3e3e, #ff8f8f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .recipes-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .recipe-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            margin-bottom: 3rem;
+            overflow: hidden;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: fadeUp 0.5s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .recipe-image {
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .recipe-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .recipe-card:hover .recipe-image img {
+            transform: scale(1.1);
+        }
+
+        .recipe-content {
+            padding: 2rem;
+        }
+
+        .recipe-title {
+            font-size: 2.5rem;
+            color: #ff3e3e;
+            margin-bottom: 1rem;
+        }
+
+        .recipe-poem {
+            font-style: italic;
+            color: #ccc;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-left: 3px solid #ff3e3e;
+            background: rgba(255,62,62,0.1);
+            border-radius: 0 10px 10px 0;
+        }
+
+        .ingredients {
+            margin: 2rem 0;
+        }
+
+        .ingredients h3 {
+            color: #ff3e3e;
+            margin-bottom: 1rem;
+        }
+
+        .ingredients ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .ingredients li {
+            background: rgba(255,255,255,0.05);
+            padding: 0.8rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .ingredients li:hover {
+            transform: translateX(10px);
+            background: rgba(255,62,62,0.2);
+        }
+
+        .instructions {
+            margin: 2rem 0;
+        }
+
+        .instructions h3 {
+            color: #ff3e3e;
+            margin-bottom: 1rem;
+        }
+
+        .step {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateX(10px);
+            background: rgba(255,62,62,0.1);
+        }
+
+        .step-number {
+            color: #ff3e3e;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>BVSR- CookBook - The Indian Culinary Journey</h1>
+            <p>A poetic exploration of traditional flavors</p>
+        </div>
+    </div>
+
+    <div class="recipes-container">
+        <article class="recipe-card">
+            <div class="recipe-image">
+                <img src="C:\Users\jaylu\Downloads\perspective-studio-zRZxs9tDha0-unsplash.jpg" alt="Butter Chicken">
+            </div>
+            <div class="recipe-content">
+                <h2 class="recipe-title">Butter Chicken (Murgh Makhani)</h2>
+                <div class="recipe-poem">
+                    In tender morsels of golden delight,<br>
+                    Simmered in gravy, rich and bright.<br>
+                    Tomatoes and cream in perfect dance,<br>
+                    A royal feast at first glance.
+                </div>
+                <div class="ingredients">
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>1kg chicken thighs</li>
+                        <li>2 cups tomato puree</li>
+                        <li>1 cup heavy cream</li>
+                        <li>2 tbsp butter</li>
+                        <li>2 tbsp garam masala</li>
+                        <li>1 tbsp ginger paste</li>
+                        <li>1 tbsp garlic paste</li>
+                        <li>Kashmiri red chili powder</li>
+                    </ul>
+                </div>
+                <div class="instructions">
+                    <h3>Cooking Instructions</h3>
+                    <div class="step">
+                        <span class="step-number">1.</span>
+                        Marinate chicken in yogurt and spices for 4 hours
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2.</span>
+                        Grill marinated chicken until charred
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3.</span>
+                        Prepare the makhani sauce with tomatoes and cream
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4.</span>
+                        Simmer chicken in the sauce until flavors meld
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Similar structure repeated for other recipes -->
+        
+    </div>
+</body>
+</html>

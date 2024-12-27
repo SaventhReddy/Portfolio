@@ -1,0 +1,443 @@
+<!---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photography Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .header {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff3e3e, #ff8f8f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            height: 300px;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1) rotateY(5deg);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.8),
+                transparent
+            );
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            transition: bottom 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover .overlay {
+            bottom: 0;
+        }
+
+        .overlay h3 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease-in-out 0.2s;
+        }
+
+        .overlay p {
+            color: #ccc;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease-in-out 0.3s;
+        }
+
+        .gallery-item:hover .overlay h3,
+        .gallery-item:hover .overlay p {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Photography Portfolio</h1>
+        <p>Capturing moments, preserving memories</p>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="C:\Users\jaylu\Downloads\perspective-studio-zRZxs9tDha0-unsplash.jpg" alt="Sunset landscape">
+            <div class="overlay">
+                <h3>Golden Hour</h3>
+                <p>Captured during sunset at coastal mountains</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="C:\Users\jaylu\Downloads\holly-landkammer-AIPpz4m3qgI-unsplash.jpg" alt="Urban architecture">
+            <div class="overlay">
+                <h3>Urban Geometry</h3>
+                <p>Modern architecture in downtown</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\BACK_UP\Snapseed\Screenshot_20211026-224058__01-01.jpeg" alt="Wildlife">
+            <div class="overlay">
+                <h3>Wild Life</h3>
+                <p>A deer in natural habitat</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\HTML-CSS\Image_Resources\3.jpg" alt="Portrait">
+            <div class="overlay">
+                <h3>Portrait Study</h3>
+                <p>Natural light portrait photography</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\HTML-CSS\Image_Resources\5.jpg" alt="Macro">
+            <div class="overlay">
+                <h3>Macro World</h3>
+                <p>Detailed close-up of nature</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\HTML-CSS\Image_Resources\IMG_20220115_080210_Bokeh.jpg" alt="Street">
+            <div class="overlay">
+                <h3>Street Life</h3>
+                <p>Candid moments from city life</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\HTML-CSS\Image_Resources\2.jpg" alt="Abstract">
+            <div class="overlay">
+                <h3>Abstract Patterns</h3>
+                <p>Finding art in everyday objects</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\HTML-CSS\Image_Resources\6.jpg" alt="Night">
+            <div class="overlay">
+                <h3>Night Photography</h3>
+                <p>City lights after dark</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\HTML-CSS\Image_Resources\9.jpg" alt="Nature">
+            <div class="overlay">
+                <h3>Natural Beauty</h3>
+                <p>Exploring wilderness</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\HTML-CSS\Image_Resources\20200315070538_IMG_3858.JPG" alt="Architecture">
+            <div class="overlay">
+                <h3>Historical Architecture</h3>
+                <p>Ancient buildings and structures</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\HTML-CSS\Image_Resources\IMG_20191204_150633_0825.jpg" alt="People">
+            <div class="overlay">
+                <h3>People & Culture</h3>
+                <p>Documentary photography</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\HTML-CSS\Image_Resources\saadhu.jpg" alt="Food">
+            <div class="overlay">
+                <h3>Food Photography</h3>
+                <p>Culinary arts captured</p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Fade-in animation for entire body */
+        body {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(1.1);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(45deg, #1f1f1f, #3a3a3a);
+            animation: slideDown 1s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: #ffaf40;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            color: #ccc;
+            font-size: 1.2rem;
+        }
+
+        /* Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            animation: shuffleIn 1.5s ease-in-out;
+        }
+
+        @keyframes shuffleIn {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(-20px);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            transform-origin: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            animation: bounceIn 0.8s ease;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease-in-out, filter 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(0.8);
+        }
+
+        /* Overlay Effect */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #ffaf40;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease 0.2s;
+        }
+
+        .gallery-item:hover .overlay h3 {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .overlay p {
+            font-size: 1rem;
+            text-align: center;
+            color: #ddd;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease 0.4s;
+        }
+
+        .gallery-item:hover .overlay p {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Photography Portfolio</h1>
+        <p>Capturing moments, preserving memories</p>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="C:\Users\jaylu\Downloads\perspective-studio-zRZxs9tDha0-unsplash.jpg" alt="Golden Hour">
+            <div class="overlay">
+                <h3>Golden Hour</h3>
+                <p>Captured during sunset at coastal mountains</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="C:\Users\jaylu\Downloads\holly-landkammer-AIPpz4m3qgI-unsplash.jpg" alt="Urban Geometry">
+            <div class="overlay">
+                <h3>Urban Geometry</h3>
+                <p>Modern architecture in downtown</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\BACK_UP\Snapseed\Screenshot_20211026-224058__01-01.jpeg" alt="Wildlife">
+            <div class="overlay">
+                <h3>Wild Life</h3>
+                <p>A deer in natural habitat</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\HTML-CSS\Image_Resources\3.jpg" alt="Portrait">
+            <div class="overlay">
+                <h3>Portrait Study</h3>
+                <p>Natural light portrait photography</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\HTML-CSS\Image_Resources\5.jpg" alt="Macro World">
+            <div class="overlay">
+                <h3>Macro World</h3>
+                <p>Detailed close-up of nature</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\HTML-CSS\Image_Resources\IMG_20220115_080210_Bokeh.jpg" alt="Street Life">
+            <div class="overlay">
+                <h3>Street Life</h3>
+                <p>Candid moments from city life</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
